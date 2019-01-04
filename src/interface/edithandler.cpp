@@ -699,13 +699,16 @@ checkmodifications_loopbegin:
 			}
 
 			bool remove;
+			/*
 			int res = DisplayChangeNotification(CEditHandler::fileType(i), iter, remove);
 			if (res == -1)
 				continue;
 
 			if (res == wxID_YES) {
+			*/
 				UploadFile(CEditHandler::fileType(i), iter, remove);
 				goto checkmodifications_loopbegin;
+			/*
 			}
 			else if (remove) {
 				if (i == static_cast<int>(remote)) {
@@ -726,6 +729,7 @@ checkmodifications_loopbegin:
 			}
 			else
 				iter->modificationTime = mtime;
+			*/
 		}
 	}
 
